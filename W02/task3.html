@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>W02:Task03</title>
+    </head>
+
+    <body>
+        <script>
+            var x0, y0, z0; // (input vertex 0)
+            var x1, y1, z1; // (input vertex 1)
+            var x2, y2, z2; // (input vertex 2)
+        </script>
+
+        <input type="vertex0_x" id="x0" name="x座標"
+        min="0">
+        <input type="vertex0_y" id="y0" name="y座標"
+        min="0">
+        <input type="vertex0_z" id="z0" name="z座標"
+        min="0">
+
+        <script>
+            function clickBtn3() {
+            const number2 = document.getElementById("number3");
+            number3.value = "2000";
+            } 
+        </script>
+
+        <script>
+            var v0 = new Vec3( x0, y0, z0 );
+            var v1 = new Vec3( x1, y1, z1 );
+            var v2 = new Vec3( x2, y2, z2 );
+            var S = AreaOfTriangle( v0, v1, v2 ); // (output value)
+        </script>
+    </body>
+</html>
