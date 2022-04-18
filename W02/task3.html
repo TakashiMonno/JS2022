@@ -1,34 +1,83 @@
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title>W02:Task03</title>
     </head>
 
     <body>
-        <script>
-            var x0, y0, z0; // (input vertex 0)
-            var x1, y1, z1; // (input vertex 1)
-            var x2, y2, z2; // (input vertex 2)
-        </script>
+        <form id="form1" action="#">
+            <span >x0 : </span> 
+            <input type="number" id="number_x0">
+            <span >y0 : </span> 
+            <input type="number" id="number_y0">
+            <span >z0 : </span> 
+            <input type="number" id="number_z0">
+            <br>
+            <span >x1 : </span> 
+            <input type="number" id="number_x1">
+            <span >y1 : </span> 
+            <input type="number" id="number_y1">
+            <span >z1 : </span> 
+            <input type="number" id="number_z1">
+            <br>
+            <span >x2 : </span> 
+            <input type="number" id="number_x2">
+            <span >y2 : </span> 
+            <input type="number" id="number_y2">
+            <span >z2 : </span> 
+            <input type="number" id="number_z2">
+            <input type="button" onclick="ClickBtn()" value="決定">
+        </form>
 
-        <input type="vertex0_x" id="x0" name="x座標"
-        min="0">
-        <input type="vertex0_y" id="y0" name="y座標"
-        min="0">
-        <input type="vertex0_z" id="z0" name="z座標"
-        min="0">
+        <p id="output-message"></p>
 
+        <script src="Vec3.js"></script>
         <script>
-            function clickBtn3() {
-            const number2 = document.getElementById("number3");
-            number3.value = "2000";
+            const ClickBtn = () => {
+                const tempx0 = document.getElementById("number_x0");
+                var x0 = tempx0.value;
+
+                const tempy0 = document.getElementById("number_y0");
+                var y0 = tempy0.value;
+
+                const tempz0 = document.getElementById("number_z0");
+                var z0 = tempz0.value;
+
+                const tempx1 = document.getElementById("number_x1");
+                var x1 = tempx1.value;
+
+                const tempy1 = document.getElementById("number_y1");
+                var y1 = tempy1.value;
+
+                const tempz1 = document.getElementById("number_z1");
+                var z1 = tempz1.value;
+
+                const tempx2 = document.getElementById("number_x2");
+                var x2 = tempx2.value;
+
+                const tempy2 = document.getElementById("number_y2");
+                var y2 = tempy2.value;
+
+                const tempz2 = document.getElementById("number_z2");
+                var z2 = tempz2.value;
+
+                var v0 = new Vec3(x0,y0,z0);
+                var v1 = new Vec3(x1,y1,z1);
+                var v2 = new Vec3(x2,y2,z2);
+
+                function AreaOfTriangle(a,b,c){
+                    var l = b.sub(a);
+                    var n = c.sub(a);
+                    var m = l.cross(n);
+
+                    var result = Math.sqrt(l.x**2 + l.y**2 + l.z**2)/2;
+                    return result;
+                }
+                var S =  AreaOfTriangle(v0,v1,v2);
+                const output = "入力された内容は「" + S +"」です。";
+                document.getElementById("output-message").innerHTML = output;
             } 
-        </script>
-
-        <script>
-            var v0 = new Vec3( x0, y0, z0 );
-            var v1 = new Vec3( x1, y1, z1 );
-            var v2 = new Vec3( x2, y2, z2 );
-            var S = AreaOfTriangle( v0, v1, v2 ); // (output value)
         </script>
     </body>
 </html>
+
