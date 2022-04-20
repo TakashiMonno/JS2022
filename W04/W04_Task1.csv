@@ -1,7 +1,7 @@
 x,y,r,color
-20,20,10,blue
-100,50,10,red
-70,80,10,green
-170,30,10,yellow
+20,20,30,blue
+100,30,20,red
+70,100,5,green
+170,30,15,yellow
 150,70,10,lightblue
-200,90,10,gray
+200,90,25,gray
