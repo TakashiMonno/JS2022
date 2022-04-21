@@ -11,7 +11,7 @@
     
     svg.selectAll("rect").data(data).enter().append("rect")
         .attr("x", function(d){return d.padding})
-        .attr("y", function(d,i){ return d.padding + 0 * ( d.height + d.padding ); })
+        .attr("y", function(d,i){ return d.padding + i * ( d.height + d.padding ); })
         .attr("width", function(d){ return d.width; })
         .attr("height", function(d){ return d.height; })
         .style("fill", function(d){ return d.color; });
