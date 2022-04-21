@@ -1,4 +1,4 @@
-padding,width,height,color
-10,100,20,red
-10,50,20,blue
-10,80,20,green
+number,padding,width,height,color
+0,10,100,20,red
+1,10,50,20,blue
+2,10,80,20,green
