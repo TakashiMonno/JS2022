@@ -5,19 +5,12 @@
     <body>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
-        d3.csv("resource.csv", function(error, data){
-        // エラー処理
-        if(error != null){
-            return;
-        }  
-  // 通常処理（dataを使用してグラフを描画）
-        })
-
-        d3.csv("resource.csv", function(data,i) {
+        d3.csv("https://takashimonno.github.io/JS2022/W04/resourse.csv", function(data,i) {
         return {
         name: i + "_" + data.name, // nameの前に「インデックス番号_」を追加
-        sales: data.sales
-        };})
+        sales: data.sales};
+        }
+        )
 	</script>
     </body>
 </html>
