@@ -8,22 +8,27 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 
 	<script>
-    var svg = d3.select("body").append("svg");
-    d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", function(data) {
-        return {
-        padding: data.padding,
-        width: data.sales,
-        height: data.height,
-        color: d.color};
-        }).then(function(data,i){
-            svg.selectAll("rect").data(data).enter().append("rect")
-                .attr("x", function(d){return d.padding;})
-                .attr("y", function(d){ return d.padding + i * ( d.height + d.padding ); })
-                .attr("width", function(d){ return d.width; })
-                .attr("height", function(d){ return d.height; })
-                .style("fill", function(d){ return d.color; });
-        }
-        )
+    //var svg = d3.select("body").append("svg");
+    d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", function(data,error) {
+        console.log(data);
+    });
+
+    //d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", function(data) {
+    //    return {
+    //    padding: data.padding,
+    //    width: data.sales,
+    //    height: data.height,
+    //    color: d.color};
+    //    }).then(function(data,i){
+    //       svg.selectAll("rect").data(data).enter().append("rect")
+    //            .attr("x", function(d){return d.padding;})
+    //            .attr("y", function(d){ return d.padding + i * ( d.height + d.padding ); })
+    //            .attr("width", function(d){ return d.width; })
+    //            .attr("height", function(d){ return d.height; })
+    //            .style("fill", function(d){ return d.color; });
+    //    }
+    //    )
+
     //d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", graph);
     //function graph(data,i){
     //svg.selectAll("rect").data(data).enter().append("rect")
