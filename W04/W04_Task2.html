@@ -6,7 +6,6 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
         var svg = d3.select("body").append("svg");
-        var span = d3.select("body").append("span");
         d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", draw);
         function draw(data){
         svg.selectAll("rect").data(data).enter().append("rect")
@@ -15,7 +14,6 @@
             .attr("width", function(d){ return d.width; })
             .attr("height", d.height)
             .style("fill", function(d){ return d.color; });
-        span.text(d.label);
         }
     </script>
     </body>
