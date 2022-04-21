@@ -9,8 +9,8 @@
     d3.csv("https://takashimonno.github.io/JS2022/W04/W04_Task2.csv", draw);
     function draw(data){
     svg.selectAll("rect").data(data).enter().append("rect")
-        .attr("x", function(d){return d.padding})
-        .attr("y", function(d){ return d.padding + d.number * ( d.height + d.padding ); })
+        .attr("x", function(d){return d.padding;})
+        .attr("y", function(d){ return ry; })
         .attr("width", function(d){ return d.width; })
         .attr("height", function(d){ return d.height; })
         .style("fill", function(d){ return d.color; });
