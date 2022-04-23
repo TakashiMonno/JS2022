@@ -1,4 +1,4 @@
-padding,width,height,color
-10,100,20,red
-10,50,20,green
-10,80,20,blue
+label,padding,width,height,color
+Label1,10,100,20,red
+Label2,10,200,20,green
+Label3,10,300,20,blue
