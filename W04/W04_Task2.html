@@ -6,7 +6,7 @@
 	<div id="result"></div>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
-	d3.csv("https://takashimonno.github.io/JS2022/W04_Task2.csv", draw);
+	d3.csv("https://takashimonno.github.io/JS2022//W04/W04_Task2.csv", draw);
 	function draw(data){
 		var svg = d3.select("body").append("svg");
 		svg.selectAll("rect").data(data).enter().append("rect")
