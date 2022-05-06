@@ -6,7 +6,7 @@ d3.csv("https://takashimonno.github.io/JS2022//W06/W06_Task1.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:30, right:30, bottom:30, left:30}
+            margin: {top:30, right:30, bottom:30, left:30},
         };
 
         const scatter_plot = new ScatterPlot( config, data );
@@ -23,12 +23,12 @@ class ScatterPlot {
                 parent: config.parent,
                 width: config.width || 256,
                 height: config.height || 256,
-                margin: config.margin || {top:10, right:10, bottom:10, left:10}
+                margin: config.margin || {top:10, right:10, bottom:10, left:10},
             }
             this.data = data;
             this.init();
         }
-    
+
         init() {
             let self = this;
 
@@ -38,7 +38,7 @@ class ScatterPlot {
             //svgのサイズ設定
             self.svg = d3.select( self.config.parent )
                 .attr('width', self.config.width)
-                .attr('height', self.config.height);
+                .attr('height', self.config.height+self.config.margin.top);
     
             self.xchart = self.svg.append('g')
                 .attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.right})`);
@@ -87,9 +87,36 @@ class ScatterPlot {
                 .attr("r", d => d.r );
     
             self.xaxis_group
-                .call( self.xaxis );
+                .call( self.xaxis )
+                .append("text")
+                .attr("fill", "black")
+                .attr("x", (self.inner_width+self.config.margin.right)/2)
+                .attr("y", self.config.margin.top)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "10pt")
+                .attr("font-weight", "middle")
+                .text("X-Label");
+
             
             self.yaxis_group
-                .call( self.yaxis );
+                .call( self.yaxis )
+                .append("text")
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("x", -self.inner_height/2)
+                .attr("y", -self.config.margin.top)
+                .attr("transform", "rotate(-90)")
+                .attr("font-weight", "middle")
+                .attr("font-size", "10pt")
+                .text("Y-Label");
+
+            self.svg.append("text")
+                .attr("x", (self.inner_width+self.config.margin.right)/2)
+                .attr("y", self.config.margin.top)
+                .attr("font-size", "13px")
+                .attr("text-anchor", "top")
+                .attr("font-weight", 700)
+                .text("Chart Title");
+
         }
     }
