@@ -1,4 +1,4 @@
-d3.csv("https://takashimonno.github.io/JS2022/W08/W08_data.csv")
+d3.csv("https://takashimonno.github.io/JS2022//W08/W08_data.csv")
     .then( data => {
         data.forEach( d => { d.width = +d.value;});
 
