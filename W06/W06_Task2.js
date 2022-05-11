@@ -32,13 +32,14 @@ class ScatterPlot {
         init() {
             let self = this;
 
+            //中
             self.inner_width = self.config.width - self.config.margin.left - self.config.margin.right;
             self.inner_height = self.config.height - self.config.margin.top - self.config.margin.bottom;
 
             //svgのサイズ設定
             self.svg = d3.select( self.config.parent )
                 .attr('width', self.config.width)
-                .attr('height', self.config.height+self.config.margin.top);
+                .attr('height', self.config.height);
     
             self.xchart = self.svg.append('g')
                 .attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.right})`);
