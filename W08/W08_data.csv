@@ -1,5 +1,5 @@
-label,padding,value,color
-Label1,10,100,red
-Label2,10,50,green
-Label3,10,80,blue
-Label4,10,200,lightblue
+label,value
+Label1,100
+Label2,50
+Label3,80
+Label4,200
