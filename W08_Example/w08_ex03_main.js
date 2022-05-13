@@ -21,4 +21,4 @@ const area = d3.area()
 svg.append('path')
     .attr('d', area(data))
     .attr('stroke', 'black')
-    .attr('fill', 'black');
+    .attr('fill', 'lightblue');
