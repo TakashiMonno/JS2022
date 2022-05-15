@@ -34,7 +34,7 @@ class Linechart {
             self.inner_height = self.config.height
 
             //svgのサイズ設定
-            self.svg = d3.select('#drawing_region')
+            self.svg = d3.select(self.config.parent )
                         .attr('width', self.inner_width)
                         .attr('height', self.inner_height);
 
