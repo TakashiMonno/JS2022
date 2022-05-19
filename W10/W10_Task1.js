@@ -1,4 +1,4 @@
-d3.csv("https://takashimonno.github.io/JS2022//W10/W10_data.csv")
+d3.csv("https://takashimonno.github.io/JS2022//W10/W10_data1.csv")
     .then( data => {
         data.forEach( d => { d.value = +d.value;});
 
