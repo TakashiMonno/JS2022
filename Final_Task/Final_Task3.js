@@ -1,4 +1,4 @@
-d3.csv("https://takashimonno.github.io/JS2022//Final_task/pre_data.csv")
+d3.csv("https://takashimonno.github.io/JS2022//Final_Task/pre_data.csv")
     .then( data => {
         data.forEach( d => { d.value = +d.value;});
 
@@ -80,7 +80,7 @@ class Barchart {
                     
             const path = d3.geoPath(projection);
                     
-            d3.json("assets/japan.geo.geojson").then(function (jpn) {
+            d3.json("https://takashimonno.github.io/JS2022//Final_task/assets/japan.geo.geojson").then(function (jpn) {
                         for (var i = 0; i < 47; i++) {
                             for (var j = 0; j < jpn.features.length; j++) {
                                  if (self.data[i].label == jpn.features[j].properties.name_local) {
