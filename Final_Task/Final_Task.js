@@ -140,7 +140,6 @@ class Barchart {
                                 .text(d.properties.name_local+"の出荷量は約"+d.properties.value+"トン");
                                     
                                 d3.select(this).style("fill","red");
-                                d3.select("#drawing_region").style("fill","red");
                             })
                             .on("mousemove", (e) => {
                                 const padding = 10;
