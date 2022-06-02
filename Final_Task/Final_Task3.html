@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Final Task</title>
+        <style>
+            body {
+                font-family: system-ui;
+            }
+            #tooltip {
+                position: absolute;
+                opacity: 0;
+                background: #fff;
+                border: 1px solid #ddd;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 2px 8px;
+            }
+            .tooltip-label {
+                font-weight: 500;
+                font-size: 11px;
+                color: #888;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button type="button" id="ascend">Ascend</button>
+            <button type="button" id="descend">descend</button>
+        </div>
+    <div id="tooltip"></div>
+    <svg id="drawing_region"></svg>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+	<script src="https://takashimonno.github.io/JS2022//Final_task/Final_Task3.js"></script>
+    </body>
+</html>

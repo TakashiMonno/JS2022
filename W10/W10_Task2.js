@@ -1,7 +1,7 @@
 d3.csv("https://takashimonno.github.io/JS2022//W10/W10_data2.csv")
     .then( data => {
         data.forEach( d => { d.x = +d.x; d.y = +d.y; });
-
+        console.log(d.length);
         var config = {
             parent: '#drawing_region',
             width: 256,

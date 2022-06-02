@@ -1,4 +1,4 @@
-d3.csv("W10_data1.csv")
+d3.csv("Final_data2.csv")
     .then( data => {
         data.forEach( d => { d.value = +d.value;});
 
