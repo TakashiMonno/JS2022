@@ -186,19 +186,14 @@ class Barchart {
                                 return c;
                             });
                         });
-                                          
-                         /*      map.transition()
-                                    .duration(400)
-                                    .style("fill", function (d) {
-                                    $loading.style('display', 'none');
-                                    var value = d.properties.value;
-                                    if (value) {
-                                        return color(value);
-                                            } else {
-                                        return "#FFF4D5";
-                                        }
-                                }) */
-                                    
+
+                        self.svg.append("text")
+                                .attr("x", (self.inner_width+self.config.margin.right)/2 - 40)
+                                .attr("y", self.config.margin.top)
+                                .attr("font-size", "12px")
+                                .attr("text-anchor", "top")
+                                .attr("font-weight", 700)
+                                .text("都道府県別みかん出荷量グラフとコロプレス地図");
                                     
                     });                
 
